@@ -1,0 +1,29 @@
+[
+  {
+    "role": "Patient",
+    "permissions": [
+      "view_records"
+    ]
+  },
+  {
+    "role": "Nurse",
+    "permissions": [
+      "view_records",
+      "update_status"
+    ]
+  },
+  {
+    "role": "Doctor",
+    "permissions": [
+      "view_records",
+      "update_status",
+      "prescribe_medication"
+    ]
+  },
+  {
+    "role": "Administrator",
+    "permissions": [
+      "manage_users"
+    ]
+  }
+]

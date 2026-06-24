@@ -1,0 +1,26 @@
+[
+  {
+    "id": "patient-1",
+    "username": "alice_patient",
+    "role": "Patient",
+    "password_hash": "$2a$10$.MTz9971TcQXBcRap2OUquGQRjEIPwRarnPNw3OgYmb.GK/VdoorK"
+  },
+  {
+    "id": "nurse-1",
+    "username": "nina_nurse",
+    "role": "Nurse",
+    "password_hash": "$2a$10$JvbL7qhNaBJKgeAs46Mf7OKCjOEoL2F./onVVjqiRMIwlQw9ihDu2"
+  },
+  {
+    "id": "doctor-1",
+    "username": "dr_doe",
+    "role": "Doctor",
+    "password_hash": "$2a$10$YtcDleEwa3yjUerbclGh8ulqZBfu3awC3Qo9pqOscTTs/50ZQ8VJy"
+  },
+  {
+    "id": "admin-1",
+    "username": "adam_admin",
+    "role": "Administrator",
+    "password_hash": "$2a$10$FLtBovmKJu25jWeTby5Pr.Za/lfeKomBkMQvthfrwjt3EVVjRh9XS"
+  }
+]
