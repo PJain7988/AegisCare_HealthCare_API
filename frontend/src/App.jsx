@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
+import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import { getToken } from './api';
 import './App.css';
@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route 
           path="/" 
-          element={isAuthenticated ? <Navigate to="/dashboard" /> : <Login onLogin={handleLogin} />} 
+          element={isAuthenticated ? <Navigate to="/dashboard" /> : <Landing onLogin={handleLogin} />} 
         />
         <Route 
           path="/dashboard" 

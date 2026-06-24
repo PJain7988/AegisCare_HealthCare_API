@@ -12,11 +12,12 @@ const dir = path.resolve(__dirname, '../../', config.dataDir);
 const usersPath = path.join(dir, 'users.json');
 const recordsPath = path.join(dir, 'records.json');
 const permissionsPath = path.join(dir, 'permissions.json');
+const appointmentsPath = path.join(dir, 'appointments.json');
 const auditPath = path.join(dir, 'audit.log');
 
 function ensureFiles() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  for (const p of [usersPath, recordsPath, permissionsPath]) {
+  for (const p of [usersPath, recordsPath, permissionsPath, appointmentsPath]) {
     if (!fs.existsSync(p)) fs.writeFileSync(p, '[]', 'utf8');
   }
   if (!fs.existsSync(auditPath)) fs.writeFileSync(auditPath, '', 'utf8');
@@ -42,6 +43,12 @@ export const db = {
   },
   writePermissions(perms) {
     fs.writeFileSync(permissionsPath, JSON.stringify(perms, null, 2));
+  },
+  readAppointments() {
+    return JSON.parse(fs.readFileSync(appointmentsPath, 'utf8'));
+  },
+  writeAppointments(appointments) {
+    fs.writeFileSync(appointmentsPath, JSON.stringify(appointments, null, 2));
   },
   appendAudit(line) {
     fs.appendFileSync(auditPath, line + '\n', 'utf8');

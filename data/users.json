@@ -3,24 +3,24 @@
     "id": "patient-1",
     "username": "alice_patient",
     "role": "Patient",
-    "password_hash": "$2a$10$.MTz9971TcQXBcRap2OUquGQRjEIPwRarnPNw3OgYmb.GK/VdoorK"
+    "password_hash": "$2a$10$FdooEjTXGTMDx1gBoigaqeq53iVCb.UUKy4bVFmhrCnsULu65TybC"
   },
   {
     "id": "nurse-1",
     "username": "nina_nurse",
     "role": "Nurse",
-    "password_hash": "$2a$10$JvbL7qhNaBJKgeAs46Mf7OKCjOEoL2F./onVVjqiRMIwlQw9ihDu2"
+    "password_hash": "$2a$10$Taeveln2dNnBwztCwnOrYunNwidgiGmQVr7TmrnrHLSgMCuB5vl1C"
   },
   {
     "id": "doctor-1",
     "username": "dr_doe",
     "role": "Doctor",
-    "password_hash": "$2a$10$YtcDleEwa3yjUerbclGh8ulqZBfu3awC3Qo9pqOscTTs/50ZQ8VJy"
+    "password_hash": "$2a$10$DgOHQbwfgyLS32sgrAn0wuPg89amlg7dkrDSBhDo1EzVoFcCgAZte"
   },
   {
     "id": "admin-1",
     "username": "adam_admin",
     "role": "Administrator",
-    "password_hash": "$2a$10$FLtBovmKJu25jWeTby5Pr.Za/lfeKomBkMQvthfrwjt3EVVjRh9XS"
+    "password_hash": "$2a$10$6EmCc.bB1w0reZOzDUKGfOMGss6UkxS2H.mSoPKI7mOg8T6UjVWLG"
   }
 ]

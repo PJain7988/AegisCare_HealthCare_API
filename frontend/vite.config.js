@@ -9,7 +9,8 @@ export default defineConfig({
       '/auth': 'http://localhost:4000',
       '/records': 'http://localhost:4000',
       '/users': 'http://localhost:4000',
-      '/health': 'http://localhost:4000'
+      '/health': 'http://localhost:4000',
+      '/appointments': 'http://localhost:4000'
     }
   }
 })

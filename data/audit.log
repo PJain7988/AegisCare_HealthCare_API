@@ -1,0 +1,19 @@
+{"timestamp":"2026-06-24T07:23:21.233Z","action":"auth.login","user_id":"admin-1","role":"Administrator"}
+{"timestamp":"2026-06-24T07:23:48.078Z","action":"auth.login","user_id":"doctor-1","role":"Doctor"}
+{"timestamp":"2026-06-24T07:25:52.402Z","action":"records.view","actor_id":"doctor-1","patient_id":"abc"}
+{"timestamp":"2026-06-24T07:25:53.156Z","action":"records.view","actor_id":"doctor-1","patient_id":"abc"}
+{"timestamp":"2026-06-24T07:25:53.371Z","action":"records.view","actor_id":"doctor-1","patient_id":"abc"}
+{"timestamp":"2026-06-24T07:25:54.668Z","action":"auth.escalate","user_id":"doctor-1","reason":"Emergency situation"}
+{"timestamp":"2026-06-24T07:26:54.460Z","action":"auth.login","user_id":"patient-1","role":"Patient"}
+{"timestamp":"2026-06-24T07:26:54.500Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:26:54.513Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:27:34.631Z","action":"records.view","actor_id":"doctor-1","patient_id":"alice_patient"}
+{"timestamp":"2026-06-24T07:27:36.200Z","action":"records.view","actor_id":"doctor-1","patient_id":"alice_patient"}
+{"timestamp":"2026-06-24T07:28:31.037Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:28:33.036Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:40:54.662Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:40:54.677Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:40:54.698Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:40:54.709Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:41:16.859Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}
+{"timestamp":"2026-06-24T07:41:16.869Z","action":"records.view","actor_id":"patient-1","patient_id":"patient-1"}

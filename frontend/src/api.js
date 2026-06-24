@@ -24,10 +24,36 @@ export const api = {
   login: async (username, password) => {
     const res = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
-      headers: getHeaders(),
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
     });
     if (!res.ok) throw new Error('Login failed');
+    return res.json();
+  },
+
+  register: async (username, password) => {
+    const res = await fetch(`${API_BASE}/auth/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+    if (!res.ok) throw new Error('Registration failed');
+    return res.json();
+  },
+
+  getAppointments: async () => {
+    const res = await fetch(`${API_BASE}/appointments`, { headers: getHeaders() });
+    if (!res.ok) throw new Error('Failed to fetch appointments');
+    return res.json();
+  },
+
+  bookAppointment: async (doctor_name, department, date_time) => {
+    const res = await fetch(`${API_BASE}/appointments`, {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify({ doctor_name, department, date_time })
+    });
+    if (!res.ok) throw new Error('Failed to book appointment');
     return res.json();
   },
   

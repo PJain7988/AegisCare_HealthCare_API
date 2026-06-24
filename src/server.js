@@ -7,6 +7,7 @@ import { auditMiddleware } from './middleware/audit.js';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
 import recordRoutes from './routes/records.js';
+import appointmentRoutes from './routes/appointments.js';
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.get('/health', (req, res) => {
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 app.use('/records', recordRoutes);
+app.use('/appointments', appointmentRoutes);
 
 // 404 handler
 app.use((req, res) => {

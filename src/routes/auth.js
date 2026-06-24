@@ -73,4 +73,44 @@ router.post('/escalate', (req, res) => {
   return res.json({ access_token: elevatedToken, expires_in: 900 });
 });
 
+router.post('/register', async (req, res) => {
+  if (!config.allowInsecureHttp && req.protocol !== 'https') {
+    return res.status(400).json({ error: 'HTTPS required in production' });
+  }
+  const { username, password } = req.body || {};
+  if (!username || !password) return res.status(400).json({ error: 'username and password required' });
+
+  const users = db.readUsers();
+  if (users.some(u => u.username === username)) {
+    return res.status(409).json({ error: 'username already exists' });
+  }
+
+  const { hashPassword } = await import('../security/crypto.js');
+  const password_hash = await hashPassword(password);
+  
+  // Create as Patient by default
+  const user = {
+    id: `patient-${Date.now()}`,
+    username,
+    role: 'Patient',
+    password_hash
+  };
+
+  users.push(user);
+  db.writeUsers(users);
+
+  // Auto-login after registration
+  const permissions = RolePermissions[user.role] || [];
+  const payload = {
+    sub: user.id,
+    role: user.role,
+    permissions
+  };
+  const token = issueToken(payload, config.jwtExpiresIn);
+
+  req.audit('auth.register', { user_id: user.id, username });
+
+  return res.status(201).json({ access_token: token, expires_in: config.jwtExpiresIn });
+});
+
 export default router;
