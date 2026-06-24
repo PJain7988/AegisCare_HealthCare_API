@@ -53,10 +53,10 @@ export default function RegisterModal({ isOpen, onClose, onRegister }) {
         </button>
         
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          <div style={{ display: 'inline-flex', padding: '0.5rem', backgroundColor: '#0f766e', borderRadius: '0.5rem', color: 'white', marginBottom: '1rem' }}>
-            <Activity size={32} />
+          <div style={{ display: 'inline-flex', marginBottom: '1rem' }}>
+            <img src="/logo.jpg" alt="AegisCare Logo" style={{ height: '64px', borderRadius: '0.5rem' }} />
           </div>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#0f766e', fontWeight: 700 }}>Create account</h2>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--color-trust-blue)', fontWeight: 700 }}>Create account</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>
             Register as a new patient at AegisCare
           </p>
@@ -106,7 +106,7 @@ export default function RegisterModal({ isOpen, onClose, onRegister }) {
             <input type="password" className="input-field" style={{ backgroundColor: 'white', border: '1px solid #e2e8f0' }} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required placeholder="Repeat your password" minLength={6} />
           </div>
 
-          <button type="submit" className="btn" style={{ width: '100%', backgroundColor: '#0f766e', color: 'white', borderRadius: '0.5rem', padding: '1rem', fontWeight: 600, border: 'none' }} disabled={loading}>
+          <button type="submit" className="btn" style={{ width: '100%', backgroundColor: 'var(--color-trust-blue)', color: 'white', borderRadius: '0.5rem', padding: '1rem', fontWeight: 600, border: 'none' }} disabled={loading}>
             {loading ? 'Creating Account...' : 'Create Account & Send OTP →'}
           </button>
         </form>

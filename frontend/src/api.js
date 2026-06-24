@@ -1,4 +1,4 @@
-const API_BASE = ''; // Proxied via Vite
+const API_BASE = '/api';
 
 export const setToken = (token) => {
   localStorage.setItem('aegis_token', token);

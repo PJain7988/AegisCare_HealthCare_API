@@ -6,11 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/auth': 'http://localhost:4000',
-      '/records': 'http://localhost:4000',
-      '/users': 'http://localhost:4000',
-      '/health': 'http://localhost:4000',
-      '/appointments': 'http://localhost:4000'
+      '/api': 'http://localhost:4000',
+      '/health': 'http://localhost:4000'
     }
   }
 })

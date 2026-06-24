@@ -1,8 +1,8 @@
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { config } from '../config.js';
+import mongoose from 'mongoose';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,6 +14,20 @@ const recordsPath = path.join(dir, 'records.json');
 const permissionsPath = path.join(dir, 'permissions.json');
 const appointmentsPath = path.join(dir, 'appointments.json');
 const auditPath = path.join(dir, 'audit.log');
+
+export const connectDB = async () => {
+  try {
+    if (!process.env.MONGO_URI) {
+      console.warn('⚠️ No MONGO_URI provided in .env. Skipping MongoDB connection for now.');
+      return;
+    }
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('✅ Connected to MongoDB Enterprise Database');
+  } catch (error) {
+    console.error('❌ MongoDB Connection Error:', error);
+    process.exit(1);
+  }
+};
 
 function ensureFiles() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });

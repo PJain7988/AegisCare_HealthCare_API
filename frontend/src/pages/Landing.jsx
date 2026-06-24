@@ -23,23 +23,22 @@ export default function Landing({ onLogin }) {
       {/* Navigation */}
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 2rem', backgroundColor: 'transparent', position: 'absolute', top: 0, left: 0, right: 0, zIndex: 40 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', fontSize: '1.25rem', color: 'var(--color-trust-blue)' }}>
-          <Activity size={28} />
-          <span>Rumah Sakit<br /><span style={{ fontSize: '1.5rem', fontWeight: '800' }}>ANAVERSE</span></span>
+          <img src="/logo.jpg" alt="AegisCare Logo" style={{ height: '56px', borderRadius: '0.5rem' }} />
         </div>
         
         <div style={{ display: 'none', gap: '2rem', color: 'var(--color-text-muted)', fontWeight: 500 }} className="nav-links">
-          <span style={{ cursor: 'pointer', color: 'var(--color-trust-blue)', borderBottom: '2px solid var(--color-trust-blue)' }}>Beranda</span>
-          <span style={{ cursor: 'pointer' }}>Tentang Kami</span>
-          <span style={{ cursor: 'pointer' }}>Layanan</span>
-          <span style={{ cursor: 'pointer' }}>Dokter</span>
-          <span style={{ cursor: 'pointer' }}>Kontak</span>
+          <span style={{ cursor: 'pointer', color: 'var(--color-trust-blue)', borderBottom: '2px solid var(--color-trust-blue)' }}>Home</span>
+          <span style={{ cursor: 'pointer' }}>About Us</span>
+          <span style={{ cursor: 'pointer' }}>Services</span>
+          <span style={{ cursor: 'pointer' }}>Doctors</span>
+          <span style={{ cursor: 'pointer' }}>Contact</span>
         </div>
 
         <div style={{ display: 'flex', gap: '1rem' }}>
           <button className="btn btn-outline" style={{ border: 'none', color: 'var(--color-trust-blue)' }} onClick={() => setIsLoginModalOpen(true)}>Sign In</button>
           <button className="btn btn-outline" style={{ border: 'none', color: 'var(--color-trust-blue)' }} onClick={() => setIsRegisterModalOpen(true)}>Register</button>
           <button className="btn btn-success" onClick={handleBookClick}>
-            <Calendar size={18} style={{ marginRight: '0.5rem' }} /> Daftar Online
+            <Calendar size={18} style={{ marginRight: '0.5rem' }} /> Book Online
           </button>
         </div>
       </nav>
@@ -50,23 +49,23 @@ export default function Landing({ onLogin }) {
           <div className="hero-content">
             <div className="hero-badge">
               <HeartPulse size={16} style={{ marginRight: '0.5rem' }} />
-              Kesehatan Anda, Prioritas Kami
+              Your Health, Our Priority
             </div>
             
             <h1 className="hero-title">
-              Pelayanan Terbaik<br />untuk <span className="text-mint">Kesehatan</span><br />Anda dan Keluarga
+              Best Care<br />for Your <span className="text-mint">Health</span><br />and Family
             </h1>
             
             <p className="hero-subtitle">
-              Kami hadir dengan layanan medis berkualitas, dokter berpengalaman, dan fasilitas modern untuk memberikan perawatan terbaik.
+              We provide quality medical services, experienced doctors, and modern facilities to deliver the best care.
             </p>
             
             <div style={{ display: 'flex', gap: '1rem' }}>
               <button className="btn btn-success" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>
-                Lihat Layanan <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                View Services <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
               </button>
               <button className="btn btn-outline-dark" onClick={handleBookClick} style={{ padding: '1rem 2rem', fontSize: '1rem', backgroundColor: 'white' }}>
-                <Calendar size={18} style={{ marginRight: '0.5rem' }} /> Buat Janji Temu
+                <Calendar size={18} style={{ marginRight: '0.5rem' }} /> Book Appointment
               </button>
             </div>
           </div>
@@ -83,28 +82,28 @@ export default function Landing({ onLogin }) {
           <div className="stat-icon"><Users size={24} /></div>
           <div className="stat-text">
             <span className="stat-value">15+</span>
-            <span className="stat-label">Dokter Spesialis</span>
+            <span className="stat-label">Specialist Doctors</span>
           </div>
         </div>
         <div className="stat-item">
           <div className="stat-icon"><HeartPulse size={24} /></div>
           <div className="stat-text">
-            <span className="stat-value">25.000+</span>
-            <span className="stat-label">Pasien Terlayani</span>
+            <span className="stat-value">25,000+</span>
+            <span className="stat-label">Patients Served</span>
           </div>
         </div>
         <div className="stat-item">
           <div className="stat-icon"><Building size={24} /></div>
           <div className="stat-text">
             <span className="stat-value">120+</span>
-            <span className="stat-label">Kamar Perawatan</span>
+            <span className="stat-label">Care Rooms</span>
           </div>
         </div>
         <div className="stat-item">
           <div className="stat-icon"><Star size={24} /></div>
           <div className="stat-text">
             <span className="stat-value">98%</span>
-            <span className="stat-label">Kepuasan Pasien</span>
+            <span className="stat-label">Patient Satisfaction</span>
           </div>
         </div>
       </div>
@@ -113,16 +112,16 @@ export default function Landing({ onLogin }) {
       <section style={{ padding: '8rem 2rem 5rem 2rem' }}>
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Layanan Kami</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Our Services</h2>
             <span style={{ color: 'var(--color-trust-blue)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
-              Lihat Semua Layanan <ArrowRight size={16} />
+              View All Services <ArrowRight size={16} />
             </span>
           </div>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-            {['Poli Spesialis', 'Rawat Inap', 'IGD 24 Jam', 'Radiologi', 'Laboratorium', 'Farmasi'].map((svc, i) => (
+            {['Specialist Clinic', 'Inpatient Care', '24/7 ER', 'Radiology', 'Laboratory', 'Pharmacy'].map((svc, i) => (
               <div key={i} style={{ backgroundColor: 'white', borderRadius: '1.5rem', padding: '1.5rem', textAlign: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', transition: 'transform 0.2s', cursor: 'pointer' }} onMouseEnter={e => e.currentTarget.style.transform='translateY(-5px)'} onMouseLeave={e => e.currentTarget.style.transform='translateY(0)'}>
-                <div style={{ width: '64px', height: '64px', backgroundColor: '#eff6ff', borderRadius: '50%', margin: '0 auto 1.5rem auto', display: 'flex', alignItems: 'center', justify-content: 'center', color: 'var(--color-trust-blue)' }}>
+                <div style={{ width: '64px', height: '64px', backgroundColor: '#eff6ff', borderRadius: '50%', margin: '0 auto 1.5rem auto', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-trust-blue)' }}>
                   <Activity size={32} />
                 </div>
                 <h3 style={{ fontSize: '1.125rem', fontWeight: '600' }}>{svc}</h3>

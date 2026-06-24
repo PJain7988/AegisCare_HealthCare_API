@@ -51,7 +51,7 @@ export default function AppointmentModal({ isOpen, onClose }) {
           <div style={{ display: 'inline-flex', padding: '1rem', backgroundColor: '#eff6ff', borderRadius: '50%', color: 'var(--color-trust-blue)', marginBottom: '1rem' }}>
             <Calendar size={32} />
           </div>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--color-text)' }}>Buat Janji Temu</h2>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--color-text)' }}>Book Appointment</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>
             Book your appointment with our specialists.
           </p>
@@ -94,9 +94,9 @@ export default function AppointmentModal({ isOpen, onClose }) {
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
             >
-              <option value="Spesialis Jantung">Spesialis Jantung (Cardiology)</option>
-              <option value="Spesialis Anak">Spesialis Anak (Pediatrics)</option>
-              <option value="Poli Spesialis">Poli Spesialis</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Specialist Clinic">Specialist Clinic</option>
               <option value="General Practice">General Practice</option>
             </select>
           </div>
